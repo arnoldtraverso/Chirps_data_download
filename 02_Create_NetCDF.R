@@ -28,7 +28,7 @@ Create_CHIRPS_nc <- function(Path, Date_ini, Name_nc){
   filenames <- list.files("./", pattern = ".tif")
   length(filenames)
   
-  ras  <- raster(paste0(getwd(),"/",filenames[100]))
+  ras  <- raster(paste0(getwd(),"/",filenames[1]))
   mtx  <- as.matrix(ras)
   time <- 1:length(filenames)
   pp   <- array(NA, dim=c(nrow(mtx), ncol(mtx), length(time)))
